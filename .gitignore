@@ -1,0 +1,10 @@
+# Generated files
+bin/
+debug/
+dep/
+obj/
+venv/
+env
+icon.xcf
+GLYPH.md
+NOTES.md
