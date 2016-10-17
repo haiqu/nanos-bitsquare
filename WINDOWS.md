@@ -1,10 +1,12 @@
-# How to build and install Nano S firmware in Windows. Tested on Windows 7 32-bit.
+# How to build and install Nano S firmware in Windows.
+
+## Tested in Windows 7 32-bit on an IBM T60 laptop.
 
 
 ### Prerequisites - Machine and OS
 
 - Reference: https://blogs.msdn.microsoft.com/kaushal/2011/10/02/support-for-ssltls-protocols-on-windows/
-- Minimum Windows version is Windows 7. XP does not support SSL/TLS 1.1 and Ledger requires it.
+- Minimum Windows version is Windows 7. Windows XP does not support SSL/TLS 1.1 and Ledger requires it.
 - Reference: https://en.wikipedia.org/wiki/3_GB_barrier
 - Minimum physical memory: 3GB (maximum that Win32 will allow). May barely work with 2GB but untested.
 
