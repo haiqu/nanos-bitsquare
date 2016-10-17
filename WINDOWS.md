@@ -95,7 +95,9 @@ To install the application we need to first add a virtual environment to the mac
 
 ### Building the sample application
 
-Type `make` from `C:\Users\<yourname>\nanos-bitsquare`
+From `C:\Users\<yourname>\nanos-bitsquare` type
+
+`make`
 
 
 ### Install firmware (test application) into Nano S
@@ -104,6 +106,10 @@ From the virtual environment, type
 
 `python -m ledgerblue.loadApp --targetId 0x31100002 --apdu --fileName ./bin/token.hex --appName Bitsquare --appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"`
 
+or more simply
+
+`make load`
+
 
 ### Further notes - Working with Glyphs
 
@@ -111,3 +117,9 @@ From the virtual environment, type
 - Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
 - Check icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
+
+### Further notes - Working with Docker
+
+Don't. Just don't.
+
+Windows 32-bit was never supported and the last version it was "hacked" into is ancient. Such tools are an abomination, a waste of space and cause more problems than they solve. So, just don't.
