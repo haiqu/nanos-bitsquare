@@ -84,13 +84,15 @@ Congratulations, you finally have the main tools set up and we can leave that di
 
 ### Install Blue Loader
 
-To install the application we need to first add a virtual environment to the machine. 
+To install the application we need to first add a virtual environment to the machine. Open `C:\Users\<yourname>\nanos-bitsquare` in Git Gui and open a Git Bash shell.
 
-- Open `C:\Users\<yourname>\nanos-bitsquare` in Git Gui and open a Git Bash shell.
-- Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
+Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
+
 - Install virtualenv: `virtualenv ledger`
 - Run virtualenv:  `source ledger/scripts/activate`
-- Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
+
+Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
+
 - Install ledgerblue: `pip install ledgerblue`
 
 
@@ -114,7 +116,7 @@ or more simply
 
 ### Uninstall firmware from Nano S
 
-If you wish to remove the app from your device:
+If you wish to remove the app from your device, type
 
 `python -m ledgerblue.deleteApp --targetId 0x31100002 --appName Bitsquare`
 
@@ -125,11 +127,11 @@ or more simply
 
 ### Further notes - Working with Glyphs
 
-Create icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
+Create an icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 
 Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
 
-Check icon: `icon.py 16 16 icon.gif hexbitmaponly`
+Check an icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
 
 ### Further notes - Working with Docker
@@ -141,6 +143,6 @@ Windows 32-bit was never supported and the last version it was "hacked" into is 
 
 ### Further notes - secp256k1 cryptography
 
-Ref: https://github.com/LedgerHQ/blue-loader-python
+Reference: https://github.com/LedgerHQ/blue-loader-python
 
 The above page references the secp256k1 experimental elliptic curve cryptography package. I my experience this package is irretrievably borked and the developer is unresponsive to reports of problems. Installing it also leads us into Linux dependency hell, since it requires pkgconfig which in turn requires glib and gettext_runtime. So, just don't.
