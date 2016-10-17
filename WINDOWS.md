@@ -1,8 +1,7 @@
 # How to build and install Nano S firmware in Windows. Tested on Windows 7 32-bit.
 
 
-Prerequisites - Machine and OS
-------------------------------
+### Prerequisites - Machine and OS
 
 - Reference: https://blogs.msdn.microsoft.com/kaushal/2011/10/02/support-for-ssltls-protocols-on-windows/
 - Minimum Windows version is Windows 7. XP does not support SSL/TLS 1.1 and Ledger requires it.
@@ -10,8 +9,7 @@ Prerequisites - Machine and OS
 - Minimum physical memory: 3GB (maximum that Win32 will allow). May barely work with 2GB but untested.
 
 
-Prerequisites - Software Tools
-------------------------------
+### Prerequisites - Software Tools
 
 Python 2.7 plus packages gevent, greenlet & msgpack
 
@@ -30,8 +28,7 @@ Git
 - Git from https://git-scm.com/download/win and recommend you learn to use git-gui and git-bash
 
 
-Prerequisites - Configuration
------------------------------
+### Prerequisites - Configuration
 
 - Since we're building in the terminal (or Bash shell), all tools need to be visible to the environment. As a minimum the environment variables below should be set (note: BOLOS is covered further down).
 
@@ -40,10 +37,9 @@ Prerequisites - Configuration
 - To edit environment entries, go to Start->Control Panel->System->Advanced system settings->Environment variables
 
 
-Getting the files - Github downloads
-------------------------------------
+### Getting the files - Github downloads
 
-- Open a cmd terminal and you'll end up somewhere like `C:\Users\<yourname>` which is as good a place as any to download the files. For this example we'll need blue-devenv and nanos-bitsquare
+- Open a cmd terminal and you'll end up somewhere like `C:\Users\<yourname>` which is as good a place as any to download the files.
 
 - `git clone https://github.com/haiqu/nanos-bitsquare` (sample project)
 - `git clone https://github.com/haiqu/blue-devenv` (development environment)
@@ -66,8 +62,7 @@ Getting the files - Github downloads
 - `./clean-llvm.sh`
 
 
-Set the paths in your environment
----------------------------------
+### Set the paths in your environment
 
 - The system needs to know where to find this stuff now. In our example:
 
@@ -83,8 +78,7 @@ Set the paths in your environment
 - Congratulations, you finally have the main tools set up and we can leave that directory. Now let's see if we can build this thing and install it to the Nano S.
 
 
-Install Blue Loader
--------------------
+### Install Blue Loader
 
 To build the application we need to first add a virtual environment to the machine. 
 
@@ -95,20 +89,18 @@ To build the application we need to first add a virtual environment to the machi
 - Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
 - Install ledgerblue: `pip install ledgerblue`
 
-Building the sample application
--------------------------------
+
+### Building the sample application
 
 Type `make` from `C:\Users\<yourname>\nanos-bitsquare`
 
 
-Install firmware (test application) into Nano S
------------------------------------------------
+### Install firmware (test application) into Nano S
 
 - python -m ledgerblue.loadApp --targetId 0x31100002 --apdu --fileName ./bin/token.hex --appName Bitsquare --appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"
 
 
-Further notes - Working with Glyphs
------------------------------------
+### Further notes - Working with Glyphs
 
 - Create icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 - Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
