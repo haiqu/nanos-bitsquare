@@ -15,7 +15,7 @@
 #  limitations under the License.
 #*******************************************************************************
 
-APPNAME = BITSQUARE
+APPNAME = Bitsquare
 TARGET_ID = 0x31100002 #Nano S
 #TARGET_ID = 0x31000002 #Blue
 APP_LOAD_PARAMS=--appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"

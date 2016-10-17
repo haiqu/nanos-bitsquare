@@ -100,7 +100,7 @@ From `C:\Users\<yourname>\nanos-bitsquare` type
 `make`
 
 
-### Install firmware (test application) into Nano S
+### Install firmware (sample application) into Nano S
 
 From the virtual environment, type
 
@@ -109,6 +109,17 @@ From the virtual environment, type
 or more simply
 
 `make load`
+
+
+### Uninstall firmware from Nano S
+
+If you wish to remove the app from your device:
+
+`python -m ledgerblue.deleteApp --targetId 0x31100002 --appName Bitsquare`
+
+or more simply
+
+`make delete`
 
 
 ### Further notes - Working with Glyphs
