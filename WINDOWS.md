@@ -123,6 +123,10 @@ or more simply
 `make delete`
 
 
+![Screenshots](http://imgur.com/a/PWL3d)
+
+
+
 ### Further notes - Working with Glyphs
 
 Create an icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
