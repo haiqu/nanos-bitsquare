@@ -137,8 +137,6 @@ or more simply
 
 Create an icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 
-Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
-
 Check an icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
 
