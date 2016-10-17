@@ -73,7 +73,7 @@ The system needs to know where to find this stuff now. In our example:
 - BOLOS_SDK = `C://Users//<yourname>//nanos-secure-sdk`
 - BOLOS_ENV = `C://Users//<yourname>//blue-devenv`
 
-Paths used by Git Bash will need to have a double forward slash where usually a backslash would be used. This is an oddity of the Posix system rather than a bug.
+Paths used by Git Bash will need to have a double forward slash where usually a backslash would be used. This is an oddity of the Posix system rather than a bug. After setting these variables you will need to close and reopen Git-Gui and Git Bash to refresh the environment variables they know about.
 
 Now this gives us our Clang compiler setup, but we also need a second arm compiler. Get the latest Windows installer package from here: https://launchpad.net/gcc-arm-embedded/+download and extract it to `C:\Users\<yourname>\blue-devenv` but be aware that the installer will try to add the version number as a subdirectory and we don't want that so be sure to edit the path before installing.
 
