@@ -123,7 +123,7 @@ or more simply
 `make delete`
 
 
-![Screenshots](http://imgur.com/a/PWL3d)
+![Screenshots](http://imgur.com/a/PWL3d.jpg)
 
 
 
