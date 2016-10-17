@@ -39,16 +39,16 @@ Getting the files - Github downloads
 
 - Open a cmd terminal and you'll end up somewhere like C:\Users\<yourname> which is as good a place as any to download the files. For this example we'll need blue-devenv and nanos-bitsquare
 
-`git clone https://github.com/haiqu/nanos-bitsquare` (sample project)
-`git clone https://github.com/haiqu/blue-devenv` (development environment)
-`git clone https://github.com/haiqu/nanos-secure-sdk` (the Nano S software development kit)
+- `git clone https://github.com/haiqu/nanos-bitsquare` (sample project)
+- `git clone https://github.com/haiqu/blue-devenv` (development environment)
+- `git clone https://github.com/haiqu/nanos-secure-sdk` (the Nano S software development kit)
 
 - The first thing to note is that the original blue-devenv\build-llvm.sh script from Ledger has been chopped into three separate files called download-llvm.sh build-llvm.sh and clean-llvm.sh and for a very good reason. If the original script is run, it fails then deletes all the downloaded files (about 1.2-1.5GB of them!)
 
 - This is where we need to use the Git Bash shell. The files are designed for Linux but we can shortcut that by using it. So, open the git project directory blue-devenv in Git-Gui and then select Repository->Git Bash from the menu. Now we can start the real work.
 
-`./download-llvm.sh` (Only needed once, gets all the files to build this puppy.)
-`./build-llvm.sh` (Starts CMake and builds the Clang compiler scripts.)
+- `./download-llvm.sh` (Only needed once, gets all the files to build this puppy.)
+- `./build-llvm.sh` (Starts CMake and builds the Clang compiler scripts.)
 
 - You should see some failure messages at the end, don't worry about that. This script doesn't automatically build the compiler. But if you look in llvm-build you'll see two directories called `x86` and `arm` and they contain Visual Studio project files.
 
@@ -56,8 +56,8 @@ Getting the files - Github downloads
 
 - Now we re-run the build script, so that the files are installed into blue-devenv\clang-arm-fropi where they belong, and finally clean up all the build files (but _not_ the source files!).
 
-`./build-llvm.sh`
-`./clean-llvm.sh`
+- `./build-llvm.sh`
+- `./clean-llvm.sh`
 
 
 Set the paths in your environment
@@ -65,8 +65,8 @@ Set the paths in your environment
 
 - The system needs to know where to find this stuff now. In our example:
 
-- BOLOS_SDK = C://Users//<yourname>//nanos-secure-sdk
-- BOLOS_ENV = C://Users//<yourname>//blue-devenv
+- BOLOS_SDK = `C://Users//<yourname>//nanos-secure-sdk`
+- BOLOS_ENV = `C://Users//<yourname>//blue-devenv`
 
 - Paths used by Git Bash will need to have a double forward slash where usually a backslash would be used. This is an oddity of the Posix system rather than a bug.
 
