@@ -72,7 +72,7 @@ const bagl_element_t ui_idle_nanos[] = {
      NULL},
     {{BAGL_LABELINE, 0x01, 4, 26, 128, 32, 0, 0, 0, 0xFFFFFF, 0x000000,
       BAGL_FONT_OPEN_SANS_REGULAR_11px, 0},
-     "from ZeroNet plugin",
+     "from Bitsquare plugin",
      0,
      0,
      0,
@@ -272,7 +272,7 @@ unsigned short io_exchange_al(unsigned char channel, unsigned short tx_len) {
     return 0;
 }
 
-void zeronet_main(void) {
+void bitsquare_main(void) {
     volatile unsigned int rx = 0;
     volatile unsigned int tx = 0;
     volatile unsigned int flags = 0;
@@ -331,7 +331,7 @@ void zeronet_main(void) {
                     tx = 65;
                     THROW(0x9000);*/
                     ui_creation(); // We ask the user to confirm that he want to
-                                  // a new zeronet website (really necessary ?)
+                                  // a new bitsquare wallet (really necessary ?)
                     flags |= IO_ASYNCH_REPLY;
 
                 } break;
@@ -440,7 +440,7 @@ __attribute__((section(".boot"))) int main(void) {
 
             ui_idle();
 
-            zeronet_main();
+            bitsquare_main();
         }
         CATCH_OTHER(e) {
         }
