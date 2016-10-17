@@ -43,7 +43,7 @@ To edit environment entries, go to Start->Control Panel->System->Advanced system
 
 ### Getting the files - Github downloads
 
-Open a cmd terminal and you'll end up somewhere like `C:\Users\<yourname>` which is as good a place as any to download the files.
+Open a cmd terminal - now hidden away at Start->All Programs->Accessories->Command Prompt - and you'll end up somewhere like `C:\Users\<yourname>` which is as good a place as any to download the files.
 
 - `git clone https://github.com/haiqu/nanos-bitsquare` (sample project)
 - `git clone https://github.com/haiqu/blue-devenv` (development environment)
