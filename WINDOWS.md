@@ -13,7 +13,9 @@ Prerequisites - Machine and OS
 Prerequisites - Software Tools
 ------------------------------
 
-- Python 2.7 plus packages gevent, greenlet & msgpack
+Python 2.7 plus packages gevent, greenlet & msgpack
+
+- Install python 2.7 from https://www.python.org/downloads/ (not Python 3.x)
 - pip install gevent or d/l from https://pypi.python.org/pypi/gevent (win exe install)
 - pip install greenlet or d/l from here https://pypi.python.org/pypi/greenlet and easy_install.exe greenlet-0.4.10-py2.7-win32.egg
 - pip install msgpack-python or d/l from https://pypi.python.org/pypi/msgpack-python and pip install msgpack_python-0.4.8-cp27-cp27m-win32.whl
