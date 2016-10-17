@@ -90,9 +90,7 @@ Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
 
 - Install virtualenv: `virtualenv ledger`
 - Run virtualenv:  `source ledger/scripts/activate`
-
-Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
-
+- Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
 - Install ledgerblue: `pip install ledgerblue`
 
 
