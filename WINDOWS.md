@@ -88,7 +88,7 @@ Install Blue Loader
 
 To build the application we need to first add a virtual environment to the machine. 
 
-- Open C:\Users\<yourname>\nanos-bitsquare in Git Gui and open a Git Bash shell.
+- Open `C:\Users\<yourname>\nanos-bitsquare` in Git Gui and open a Git Bash shell.
 - Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
 - Install virtualenv: `virtualenv ledger`
 - Run virtualenv:  `source ledger/scripts/activate`
@@ -98,7 +98,7 @@ To build the application we need to first add a virtual environment to the machi
 Building the sample application
 -------------------------------
 
-Type 'make' from `C:\Users\<yourname>\nanos-bitsquare`
+Type `make` from `C:\Users\<yourname>\nanos-bitsquare`
 
 
 Install firmware (test application) into Nano S
