@@ -17,7 +17,7 @@ Python 2.7 plus packages gevent, greenlet & msgpack
 
 - Install python 2.7 from https://www.python.org/downloads/ (not Python 3.x)
 - `pip install gevent` or d/l from https://pypi.python.org/pypi/gevent (win exe install)
-- `pip install greenlet` or d/l from here https://pypi.python.org/pypi/greenlet and `easy_install greenlet-0.4.10-py2.7-win32.egg`
+- `pip install greenlet` or d/l from https://pypi.python.org/pypi/greenlet and `easy_install greenlet-0.4.10-py2.7-win32.egg`
 - `pip install msgpack-python` or d/l from https://pypi.python.org/pypi/msgpack-python and `pip install msgpack_python-0.4.8-cp27-cp27m-win32.whl`
 
 Visual Studio
@@ -43,7 +43,7 @@ Prerequisites - Configuration
 Getting the files - Github downloads
 ------------------------------------
 
-- Open a cmd terminal and you'll end up somewhere like C:\Users\<yourname> which is as good a place as any to download the files. For this example we'll need blue-devenv and nanos-bitsquare
+- Open a cmd terminal and you'll end up somewhere like `C:\Users\<yourname>` which is as good a place as any to download the files. For this example we'll need blue-devenv and nanos-bitsquare
 
 - `git clone https://github.com/haiqu/nanos-bitsquare` (sample project)
 - `git clone https://github.com/haiqu/blue-devenv` (development environment)
@@ -76,21 +76,17 @@ Set the paths in your environment
 
 - Paths used by Git Bash will need to have a double forward slash where usually a backslash would be used. This is an oddity of the Posix system rather than a bug.
 
-- Now this gives us out Clang compiler setup, but we also need a second arm compiler. Get the latest Windows installer package from here: https://launchpad.net/gcc-arm-embedded/+download and extract it to C:\Users\<yourname>\blue-devenv but be aware that the installer will try to add the version number as a subdirectory and we don't want that so be sure to edit the path before installing.
+- Now this gives us our Clang compiler setup, but we also need a second arm compiler. Get the latest Windows installer package from here: https://launchpad.net/gcc-arm-embedded/+download and extract it to `C:\Users\<yourname>\blue-devenv` but be aware that the installer will try to add the version number as a subdirectory and we don't want that so be sure to edit the path before installing.
 
-- You should end up with C:\Users\<yourname>\blue-devenv\arm-none-eabi plus some other subdirectories like bin, lib and share also directly under the blue-devenv directory. If you got C:\Users\<yourname>\blue-devenv\arm-none-eabi\5_3-2016q1\ or something similar then delete it and try again.
+- You should end up with `C:\Users\<yourname>\blue-devenv\arm-none-eabi` plus some other subdirectories like bin, lib and share also directly under the blue-devenv directory. If you got `C:\Users\<yourname>\blue-devenv\arm-none-eabi\5_3-2016q1\` or something similar then delete it and try again.
 
 - Congratulations, you finally have the main tools set up and we can leave that directory. Now let's see if we can build this thing and install it to the Nano S.
 
 
-Building the sample application
--------------------------------
-
-- To do this we need to first add a virtual environment to the machine. 
-
-
 Install Blue Loader
 -------------------
+
+To build the application we need to first add a virtual environment to the machine. 
 
 - Open C:\Users\<yourname>\nanos-bitsquare in Git Gui and open a Git Bash shell.
 - Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
@@ -99,7 +95,14 @@ Install Blue Loader
 - Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
 - Install ledgerblue: `pip install ledgerblue`
 
+Building the sample application
+-------------------------------
+
+Type 'make' from `C:\Users\<yourname>\nanos-bitsquare`
+
+
 Install firmware (test application) into Nano S
+-----------------------------------------------
 
 - python -m ledgerblue.loadApp --targetId 0x31100002 --apdu --fileName ./bin/token.hex --appName Bitsquare --appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"
 
