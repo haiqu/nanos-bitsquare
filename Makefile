@@ -18,7 +18,7 @@
 APPNAME = BITSQUARE
 TARGET_ID = 0x31100002 #Nano S
 #TARGET_ID = 0x31000002 #Blue
-APP_LOAD_PARAMS=--appFlags 0x00 --icon "0100ffffff0000000000008001e007f81f781e381c181fd81ff81bf818381c781ef81fe00780010000"
+APP_LOAD_PARAMS=--appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"
 
 
 ################
@@ -47,7 +47,7 @@ CONFIG_PRODUCTIONS := bin/$(PROG)
 
 SOURCE_PATH   := src $(BOLOS_SDK)/src $(dir $(shell find $(BOLOS_SDK)/lib_stusb* | grep "\.c$$")) $(dir $(shell find $(BOLOS_SDK)/lib_bluenrg* | grep "\.c$$"))
 SOURCE_FILES  := $(foreach path, $(SOURCE_PATH),$(shell find $(path) | grep "\.c$$") )
-INCLUDES_PATH := src_usb $(dir $(shell find $(BOLOS_SDK)/lib_stusb* | grep "\.h$$")) $(dir $(shell find $(BOLOS_SDK)/lib_bluenrg* | grep "\.h$$")) include src $(BOLOS_SDK)/include $(BOLOS_SDK)/include/arm
+INCLUDES_PATH := src_usb $(dir $(shell find $(BOLOS_SDK)/lib_stusb* | grep "\.h$$")) $(dir $(shell find $(BOLOS_SDK)/lib_bluenrg* | grep "\.h$$")) include src $(BOLOS_SDK)/include $(BOLOS_ENV)/arm-none-eabi/include
 
 ### platform definitions
 DEFINES := ST31 gcc __IO=volatile
@@ -82,12 +82,12 @@ CFLAGS_SHARED   += -fropi --target=armv6m-none-eabi
 
 CFLAGS += -O3 -Os $(CFLAGS_SHARED)
 
-AS     := $(GCCPATH)/arm-none-eabi-gcc
+AS     := $(BOLOS_ENV)/bin/arm-none-eabi-gcc
 AFLAGS += -ggdb2 -O3 -Os -mcpu=cortex-m0 -fno-common -mtune=cortex-m0
 
 # NOT SUPPORTED BY STM3L152 CFLAGS   += -fpack-struct
 #-pg --coverage
-LD       := $(GCCPATH)/arm-none-eabi-gcc
+LD       := $(BOLOS_ENV)/bin/arm-none-eabi-gcc
 LDFLAGS  :=
 LDFLAGS  += -gdwarf-2  -gstrict-dwarf
 #LDFLAGS  += -O0 -g3
@@ -138,10 +138,10 @@ delete:
 bin/$(PROG): $(OBJECT_FILES) $(BOLOS_SDK)/script.ld
 	@echo "[LINK] 	$@"
 	$(call log,$(call link_cmdline,$(OBJECT_FILES) $(LDLIBS),$@))
-	$(call log,$(GCCPATH)/arm-none-eabi-objcopy -O ihex -S bin/$(PROG) bin/$(PROG).hex)
+	$(call log,$(BOLOS_ENV)/bin/arm-none-eabi-objcopy -O ihex -S bin/$(PROG) bin/$(PROG).hex)
 	$(call log,mv bin/$(PROG) bin/$(PROG).elf)
 	$(call log,cp bin/$(PROG).elf obj)
-	$(call log,$(GCCPATH)/arm-none-eabi-objdump -S -d bin/$(PROG).elf > debug/$(PROG).asm)
+	$(call log,$(BOLOS_ENV)/bin/arm-none-eabi-objdump -S -d bin/$(PROG).elf > debug/$(PROG).asm)
 
 dep/%.d: %.c Makefile
 	@echo "[DEP]    $@"
