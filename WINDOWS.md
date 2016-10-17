@@ -153,4 +153,4 @@ Windows 32-bit was never supported and the last version it was "hacked" into is 
 
 Reference: https://github.com/LedgerHQ/blue-loader-python
 
-The above page references the secp256k1 experimental elliptic curve cryptography package. I my experience this package is irretrievably borked and the developer is unresponsive to reports of problems. Installing it also leads us into Linux dependency hell, since it requires pkgconfig which in turn requires glib and gettext_runtime. So, just don't.
+The above page references the secp256k1 experimental elliptic curve cryptography package. In my experience this package is irretrievably borked and the developer is unresponsive to reports of problems. Installing it also leads us into Linux dependency hell, since it requires pkgconfig which in turn requires glib and gettext_runtime. So, just don't.
