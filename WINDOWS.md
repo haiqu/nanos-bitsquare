@@ -14,7 +14,7 @@
 
 ### Prerequisites - Software Tools
 
-Python 2.7 plus packages gevent, greenlet & msgpack
+Python 2.7 plus packages gevent, greenlet, msgpack and pil
 
 - Install python 2.7 from https://www.python.org/downloads/ (not Python 3.x)
 - `pip install gevent` or d/l from https://pypi.python.org/pypi/gevent (win exe install)
@@ -123,11 +123,17 @@ or more simply
 `make delete`
 
 
+-------------------------------
+
 ![Screenshots](http://i.imgur.com/poHFClD.jpg)
 
 
+-------------------------------
 
-### Further notes - Working with Glyphs
+## Further notes 
+
+
+### Working with Glyphs
 
 Create an icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 
@@ -136,14 +142,14 @@ Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
 Check an icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
 
-### Further notes - Working with Docker
+### Working with Docker
 
 Don't. Just don't.
 
 Windows 32-bit was never supported and the last version it was "hacked" into is ancient. Such tools are an abomination, a waste of space and cause more problems than they solve. So, just don't.
 
 
-### Further notes - secp256k1 cryptography
+### secp256k1 cryptography
 
 Reference: https://github.com/LedgerHQ/blue-loader-python
 
