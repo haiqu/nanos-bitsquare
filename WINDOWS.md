@@ -88,10 +88,10 @@ Install Blue Loader
 
 - Open C:\Users\<yourname>\nanos-bitsquare in Git Gui and open a Git Bash shell.
 - Reference: https://github.com/LedgerHQ/blue-loader-python (for procedure)
-- Install virtualenv: virtualenv ledger
-- Run virtualenv:  source ledger/scripts/activate
+- Install virtualenv: `virtualenv ledger`
+- Run virtualenv:  `source ledger/scripts/activate`
 - Install Visual C++ 9 for Python: https://www.microsoft.com/en-au/download/details.aspx?id=44266
-- Install ledgerblue: pip install ledgerblue
+- Install ledgerblue: `pip install ledgerblue`
 
 Install firmware (test application) into Nano S
 
@@ -103,5 +103,5 @@ Further notes - Working with Glyphs
 
 - Create icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 - Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
-- Check icon: icon.py 16 16 icon.gif hexbitmaponly
+- Check icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
