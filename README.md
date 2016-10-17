@@ -8,7 +8,7 @@ You will need a Ledger Nano S.
 
 ### Install Ledger dev env
 
-I will explain it later...
+See WINDOWS.md
 
 You can also check this: http://ledger.readthedocs.io/en/latest/nanos/setup.html
 
