@@ -125,9 +125,11 @@ or more simply
 
 ### Further notes - Working with Glyphs
 
-- Create icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
-- Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
-- Check icon: `icon.py 16 16 icon.gif hexbitmaponly`
+Create icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
+
+Reference: https://github.com/LedgerHQ/nanos-secure-sdk (for icon.py)
+
+Check icon: `icon.py 16 16 icon.gif hexbitmaponly`
 
 
 ### Further notes - Working with Docker
@@ -135,3 +137,10 @@ or more simply
 Don't. Just don't.
 
 Windows 32-bit was never supported and the last version it was "hacked" into is ancient. Such tools are an abomination, a waste of space and cause more problems than they solve. So, just don't.
+
+
+### Further notes - secp256k1 cryptography
+
+Ref: https://github.com/LedgerHQ/blue-loader-python
+
+The above page references the secp256k1 experimental elliptic curve cryptography package. I my experience this package is irretrievably borked and the developer is unresponsive to reports of problems. Installing it also leads us into Linux dependency hell, since it requires pkgconfig which in turn requires glib and gettext_runtime. So, just don't.
