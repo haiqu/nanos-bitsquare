@@ -123,6 +123,11 @@ or more simply
 `make delete`
 
 
+### Exiting the Python virtual environment
+
+Type `deactivate` or simply close the Bash window.
+
+
 -------------------------------
 
 ![Screenshots](http://i.imgur.com/poHFClD.jpg)
