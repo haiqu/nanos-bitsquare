@@ -105,7 +105,7 @@ From `C:\Users\<yourname>\nanos-bitsquare` type
 
 From the virtual environment, type
 
-`python -m ledgerblue.loadApp --targetId 0x31100002 --apdu --fileName ./bin/token.hex --appName Bitsquare --appFlags 0x00 --icon "0100ffffff00000000000000006006f00ff00f700fee76ffffffff6e77f00ef00ff00f600600000000"`
+`python -m ledgerblue.loadApp --targetId 0x31100002 --apdu --fileName ./bin/token.hex --appName Bitsquare --appFlags 0x00 --icon "010000000000ffffffffffffffffff1ff11ff18ff177ef111111119199efff1ff11ff19ff9ffffffff"`
 
 or more simply
 
@@ -142,7 +142,7 @@ Type `deactivate` or simply close the Bash window.
 
 Create an icon: Edit any icon, save as 16x16 1-bit gif. In Gimp it's Image->Mode->Indexed and click 1-bit.
 
-Check an icon: `icon.py 16 16 icon.gif hexbitmaponly`
+Check an icon: `python icon.py 16 16 icon.gif hexbitmaponly`
 
 
 ### Working with Docker
